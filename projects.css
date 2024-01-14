@@ -305,3 +305,16 @@ fade-img {
   background: linear-gradient(to bottom, rgba(226,232,240,0) 0%,rgba(226,232,240,1) 100%);
   height: 40%;  
 }
+
+.job-title {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem; 
+}
+
+@media screen and (max-width: 600px) {
+    .job-title {
+        white-space: normal;
+    }
+}
