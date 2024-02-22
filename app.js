@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function openResume() {
-	var resumeUrl = 'Arya Patel FINAL.pdf';
+	var resumeUrl = 'FINAL.pdf';
 	window.open(resumeUrl, '_blank');
 }
   
