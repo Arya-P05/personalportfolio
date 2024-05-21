@@ -69,17 +69,6 @@ function calculateExperience(startDate) {
   return [yearsExperience.toFixed(1), professionalExperience.toFixed(1)];
 }
 
-function updateExperience() {
-  var startDate = new Date("2019-11-17");
-  startDate.setFullYear(startDate.getFullYear());
-  var [codingYears, professionalYears] = calculateExperience(startDate);
-
-  document.getElementById("codingYears").textContent = codingYears;
-  document.getElementById("professionalYears").textContent = professionalYears;
-}
-
-window.onload = updateExperience;
-
 function calculateAge(startDate) {
   var currentDate = new Date();
   console.log(currentDate, startDate);
@@ -90,7 +79,14 @@ function calculateAge(startDate) {
   return yearsLived.toFixed(0);
 }
 
-function updateAge() {
+function updateStats() {
+  var startDate = new Date("2019-11-17");
+  startDate.setFullYear(startDate.getFullYear());
+  var [codingYears, professionalYears] = calculateExperience(startDate);
+
+  document.getElementById("codingYears").textContent = codingYears;
+  document.getElementById("professionalYears").textContent = professionalYears;
+
   var birthDate = new Date("2005-06-05");
   console.log(birthDate);
   birthDate.setFullYear(birthDate.getFullYear());
@@ -99,4 +95,4 @@ function updateAge() {
   document.getElementById("age").textContent = age;
 }
 
-window.onload = updateAge;
+window.onload = updateStats;
