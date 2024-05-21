@@ -79,3 +79,24 @@ function updateExperience() {
 }
 
 window.onload = updateExperience;
+
+function calculateAge(startDate) {
+  var currentDate = new Date();
+  console.log(currentDate, startDate);
+  var years = currentDate.getFullYear() - startDate.getFullYear();
+  var months = currentDate.getMonth() - startDate.getMonth();
+  var totalMonths = years * 12 + months;
+  var yearsLived = totalMonths / 12;
+  return yearsLived.toFixed(0);
+}
+
+function updateAge() {
+  var birthDate = new Date("2005-06-05");
+  console.log(birthDate);
+  birthDate.setFullYear(birthDate.getFullYear());
+  var age = calculateAge(birthDate);
+
+  document.getElementById("age").textContent = age;
+}
+
+window.onload = updateAge;
