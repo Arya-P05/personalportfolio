@@ -4,7 +4,8 @@
   background: #f3f5f7;
 }
 
-a, a:hover {
+a,
+a:hover {
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
@@ -38,7 +39,8 @@ a, a:hover {
 .postcard a {
   color: inherit;
 }
-.postcard h1, .postcard .h1 {
+.postcard h1,
+.postcard .h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -53,7 +55,7 @@ a, a:hover {
   max-height: 180px;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: relative;
 }
 .postcard .postcard__img_link {
@@ -95,8 +97,8 @@ a, a:hover {
   margin: 0 5px 5px 0;
   cursor: default;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   transition: background-color 0.3s;
 }
 .postcard .postcard__tagbox .tag__item:hover {
@@ -148,17 +150,17 @@ a, a:hover {
   .postcard:hover .postcard__img {
     transform: scale(1.1);
   }
-  .postcard:nth-child(2n+1) {
+  .postcard:nth-child(2n + 1) {
     flex-direction: row;
   }
-  .postcard:nth-child(2n+0) {
+  .postcard:nth-child(2n + 0) {
     flex-direction: row-reverse;
   }
-  .postcard:nth-child(2n+1) .postcard__text::before {
+  .postcard:nth-child(2n + 1) .postcard__text::before {
     left: -20px !important;
     transform: rotate(5deg);
   }
-  .postcard:nth-child(2n+0) .postcard__text::before {
+  .postcard:nth-child(2n + 0) .postcard__text::before {
     right: -12px !important;
     transform: rotate(-4deg);
   }
@@ -197,11 +199,19 @@ a, a:hover {
 }
 
 .green::before {
-  background-image: linear-gradient(-30deg, rgba(121, 221, 9, 0.1), transparent 50%);
+  background-image: linear-gradient(
+    -30deg,
+    rgba(121, 221, 9, 0.1),
+    transparent 50%
+  );
 }
 
 .green:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(121, 221, 9, 0.1), transparent 50%);
+  background-image: linear-gradient(
+    30deg,
+    rgba(121, 221, 9, 0.1),
+    transparent 50%
+  );
 }
 
 .postcard .postcard__tagbox .blue.play:hover {
@@ -217,11 +227,19 @@ a, a:hover {
 }
 
 .blue::before {
-  background-image: linear-gradient(-30deg, rgba(112, 43, 180, 0.619), transparent 50%);
+  background-image: linear-gradient(
+    -30deg,
+    rgba(112, 43, 180, 0.619),
+    transparent 50%
+  );
 }
 
 .blue:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(112, 43, 180, 0.619), transparent 50%);
+  background-image: linear-gradient(
+    30deg,
+    rgba(112, 43, 180, 0.619),
+    transparent 50%
+  );
 }
 
 .postcard .postcard__tagbox .orange.play:hover {
@@ -237,11 +255,19 @@ a, a:hover {
 }
 
 .orange::before {
-  background-image: linear-gradient(-30deg, rgba(255, 106, 0, 0.1), transparent 50%);
+  background-image: linear-gradient(
+    -30deg,
+    rgba(255, 106, 0, 0.1),
+    transparent 50%
+  );
 }
 
 .orange:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(255, 106, 0, 0.1), transparent 50%);
+  background-image: linear-gradient(
+    30deg,
+    rgba(255, 106, 0, 0.1),
+    transparent 50%
+  );
 }
 
 .postcard .postcard__tagbox .yellow.play:hover {
@@ -258,63 +284,107 @@ a, a:hover {
 }
 
 .yellow::before {
-  background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+  background-image: linear-gradient(
+    -30deg,
+    rgba(189, 187, 73, 0.1),
+    transparent 50%
+  );
 }
 
 .yellow:nth-child(2n)::before {
-  background-image: linear-gradient(30deg, rgba(189, 187, 73, 0.1), transparent 50%);
+  background-image: linear-gradient(
+    30deg,
+    rgba(189, 187, 73, 0.1),
+    transparent 50%
+  );
 }
 
 @media screen and (min-width: 769px) {
   .green::before {
-    background-image: linear-gradient(-80deg, rgba(121, 221, 9, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      -80deg,
+      rgba(121, 221, 9, 0.1),
+      transparent 50%
+    );
   }
   .green:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(121, 221, 9, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      80deg,
+      rgba(121, 221, 9, 0.1),
+      transparent 50%
+    );
   }
   .blue::before {
-    background-image: linear-gradient(-80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      -80deg,
+      rgba(0, 118, 189, 0.1),
+      transparent 50%
+    );
   }
   .blue:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(0, 118, 189, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      80deg,
+      rgba(0, 118, 189, 0.1),
+      transparent 50%
+    );
   }
   .red::before {
-    background-image: linear-gradient(-80deg, rgba(189, 21, 11, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      -80deg,
+      rgba(189, 21, 11, 0.1),
+      transparent 50%
+    );
   }
   .red:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(189, 21, 11, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      80deg,
+      rgba(189, 21, 11, 0.1),
+      transparent 50%
+    );
   }
   .yellow::before {
-    background-image: linear-gradient(-80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      -80deg,
+      rgba(189, 187, 73, 0.1),
+      transparent 50%
+    );
   }
   .yellow:nth-child(2n)::before {
-    background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+    background-image: linear-gradient(
+      80deg,
+      rgba(189, 187, 73, 0.1),
+      transparent 50%
+    );
   }
 }
 
 fade-img {
-  position: relative; 
+  position: relative;
 }
 
 .fade-img:after {
-  content:""; 
-  position: absolute; 
+  content: "";
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to bottom, rgba(226,232,240,0) 0%,rgba(226,232,240,1) 100%);
-  height: 40%;  
+  background: linear-gradient(
+    to bottom,
+    rgba(226, 232, 240, 0) 0%,
+    rgba(226, 232, 240, 1) 100%
+  );
+  height: 40%;
 }
 
 .job-title {
   margin: 2rem 0;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
 }
 
 @media screen and (max-width: 600px) {
-    .job-title {
-        white-space: normal;
-    }
+  .job-title {
+    white-space: normal;
+  }
 }
