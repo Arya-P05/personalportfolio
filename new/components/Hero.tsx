@@ -1,11 +1,9 @@
 import React from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
-import SocialButton from "./ui/SocialButton";
-import { FaLocationArrow } from "react-icons/fa";
+import IconButton from "./ui/IconButton";
+import { FaLocationArrow, FaGraduationCap, FaCode } from "react-icons/fa";
 import "./fade.css";
-import { FaCode } from "react-icons/fa";
-import { FaGraduationCap } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -31,7 +29,6 @@ const Hero = () => {
           </div>
           Computer Science + Finance @ UWaterloo
         </h2>
-
         <a href="#about" className="fade-in">
           <MagicButton
             text="My Work"
@@ -40,6 +37,16 @@ const Hero = () => {
           />
         </a>
       </div>
+      <a
+        href="#workpls"
+        className="fade-in text-blue-100
+        "
+      >
+        <IconButton
+          positionClasses="fixed bottom-0 left-0 m-4"
+          otherClasses="h-24 w-24"
+        />
+      </a>
     </div>
   );
 };

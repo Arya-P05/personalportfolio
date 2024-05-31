@@ -1,0 +1,15 @@
+.icon {
+  display: flex; /* Show the regular heart icon by default */
+}
+
+.hover-icon {
+  display: none; /* Hide the filled heart icon by default */
+}
+
+button:hover .icon {
+  display: none; /* Hide the regular heart icon when button is hovered */
+}
+
+button:hover .hover-icon {
+  display: flex; /* Show the filled heart icon when button is hovered */
+}
