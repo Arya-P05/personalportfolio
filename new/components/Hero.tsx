@@ -4,6 +4,20 @@ import MagicButton from "./ui/MagicButton";
 import IconButton from "./ui/IconButton";
 import { FaLocationArrow, FaGraduationCap, FaCode } from "react-icons/fa";
 import "./fade.css";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { AtSign, Copy, CalendarDays } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -37,16 +51,47 @@ const Hero = () => {
           />
         </a>
       </div>
-      <a
-        href="#workpls"
-        className="fade-in text-blue-100
-        "
-      >
-        <IconButton
-          positionClasses="fixed bottom-0 left-0 m-4"
-          otherClasses="h-24 w-24"
-        />
-      </a>
+      <div className="absolute left-0 bottom-0 m-10">
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button variant="ghost">
+              <AtSign />
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Sync w/ me</DialogTitle>
+              <DialogDescription>
+                I'm always looking for new challenges to lend a helping hand
+                with and meet new people.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="flex items-center space-x-2">
+              <div className="grid flex-1 gap-2">
+                <Label htmlFor="link" className="sr-only">
+                  Link
+                </Label>
+                <Input
+                  id="link"
+                  defaultValue="https://ui.shadcn.com/docs/installation"
+                  readOnly
+                />
+              </div>
+              <Button type="button" size="sm" className="px-3">
+                <span className="sr-only">Copy</span>
+                <Copy className="h-4 w-4" />
+              </Button>
+            </div>
+            <DialogFooter className="sm:justify-start">
+              <DialogClose asChild>
+                <Button type="button" variant="secondary">
+                  Close
+                </Button>
+              </DialogClose>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+      </div>
     </div>
   );
 };
