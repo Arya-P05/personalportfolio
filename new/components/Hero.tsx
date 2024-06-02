@@ -57,7 +57,7 @@ const Hero = () => {
           </div>
           Computer Science + Finance @ UWaterloo
         </h2>
-        <a href="#about" className="fade-in">
+        <a href="work" className="fade-in">
           <MagicButton
             text="My Work"
             icon={<FaLocationArrow />}
