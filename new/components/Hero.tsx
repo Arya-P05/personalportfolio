@@ -17,7 +17,21 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { AtSign, Copy, CalendarDays } from "lucide-react";
+import {
+  AtSign,
+  Copy,
+  CalendarDays,
+  Mail,
+  Instagram,
+  Linkedin,
+  Github,
+} from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 const Hero = () => {
   return (
@@ -51,7 +65,7 @@ const Hero = () => {
           />
         </a>
       </div>
-      <div className="absolute left-0 bottom-0 m-10">
+      <div className="absolute left-0 bottom-0 m-10 fade-in">
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="ghost">
@@ -60,28 +74,106 @@ const Hero = () => {
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle>Sync w/ me</DialogTitle>
+              <DialogTitle>Lets Connect</DialogTitle>
               <DialogDescription>
                 I'm always looking for new challenges to lend a helping hand
-                with and meet new people.
+                with and meet new people. Reach out anytime!
               </DialogDescription>
             </DialogHeader>
-            <div className="flex items-center space-x-2">
-              <div className="grid flex-1 gap-2">
-                <Label htmlFor="link" className="sr-only">
-                  Link
-                </Label>
-                <Input
-                  id="link"
-                  defaultValue="https://ui.shadcn.com/docs/installation"
-                  readOnly
-                />
+
+            <div className="flex items-center space-x mb-2">
+              <a
+                href="https://www.linkedin.com/in/arya-pa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button type="button" size="sm" className="px-3">
+                  <span className="sr-only">LinkedIn</span>
+                  <Linkedin className="h-4 w-4" />
+                </Button>
+              </a>
+              <div className="flex gap-2">
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <a
+                      href="https://www.linkedin.com/in/arya-pa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="link">arya-pa</Button>
+                    </a>
+                  </HoverCardTrigger>
+                </HoverCard>
               </div>
-              <Button type="button" size="sm" className="px-3">
-                <span className="sr-only">Copy</span>
-                <Copy className="h-4 w-4" />
-              </Button>
             </div>
+            <div className="flex items-center space-x mb-2">
+              <a
+                href="https://github.com/Arya-P05"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button type="button" size="sm" className="px-3">
+                  <span className="sr-only">Github</span>
+                  <Github className="h-4 w-4" />
+                </Button>
+              </a>
+              <div className="flex gap-2">
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <a
+                      href="https://github.com/Arya-P05"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="link">arya-p05</Button>
+                    </a>
+                  </HoverCardTrigger>
+                </HoverCard>
+              </div>
+            </div>
+            <div className="flex items-center space-x mb-2">
+              <a href="mailto:arya.patel2354@gmail.com">
+                <Button type="button" size="sm" className="px-3">
+                  <span className="sr-only">Email</span>
+                  <Mail className="h-4 w-4" />
+                </Button>
+              </a>
+              <div className="flex gap-2">
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <a href="mailto:arya.patel2354@gmail.com">
+                      <Button variant="link">arya.patel2354@gmail.com</Button>
+                    </a>
+                  </HoverCardTrigger>
+                </HoverCard>
+              </div>
+            </div>
+            <div className="flex items-center space-x mb-2">
+              <a
+                href="https://www.instagram.com/arya.p05/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button type="button" size="sm" className="px-3">
+                  <span className="sr-only">Instagram</span>
+                  <Instagram className="h-4 w-4" />
+                </Button>
+              </a>
+              <div className="flex gap-2">
+                <HoverCard>
+                  <HoverCardTrigger asChild>
+                    <a
+                      href="https://www.instagram.com/arya.p05/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Button variant="link">arya.p05</Button>
+                    </a>
+                  </HoverCardTrigger>
+                </HoverCard>
+              </div>
+            </div>
+
             <DialogFooter className="sm:justify-start">
               <DialogClose asChild>
                 <Button type="button" variant="secondary">
