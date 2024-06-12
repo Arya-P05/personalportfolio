@@ -1,7 +1,7 @@
+"use client";
 import React from "react";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
-import IconButton from "./ui/IconButton";
 import { FaLocationArrow, FaGraduationCap, FaCode } from "react-icons/fa";
 import "./fade.css";
 import { Button } from "@/components/ui/button";
@@ -15,36 +15,20 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  AtSign,
-  Copy,
-  CalendarDays,
-  Mail,
-  Instagram,
-  Linkedin,
-  Github,
-} from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+import { AtSign, Mail, Instagram, Linkedin, Github } from "lucide-react";
+import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 
 const Hero = () => {
   return (
     <div className="relative w-screen h-screen flex flex-col items-center justify-center">
       <div className="relative z-10 text-center max-w-[89vw] ms:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center my-20">
-        <h2 className="fade-inn uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+        <h2 className="fade-in uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
           Hello,
         </h2>
         <TextGenerateEffect
-          className="text-center text-[40px] md:text-5xl lg:text-6xl"
+          className="text-center text-[40px] md:text-5xl lg:text-6xl fade-in"
           words="I'm Arya Patel"
         />
-
         <h2 className="fade-in uppercase tracking-widest text-xs text-center text-blue-100 max-w-200 mb-2 flex items-center justify-center">
           <div className="mr-2 mb-0.5">
             <FaCode />
@@ -92,7 +76,7 @@ const Hero = () => {
                   <Linkedin className="h-4 w-4" />
                 </Button>
               </a>
-              <div className="flex gap-2">
+              <div className="flex">
                 <HoverCard>
                   <HoverCardTrigger asChild>
                     <a
