@@ -57,7 +57,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60",
-    img: "/sunset.jpeg",
+    img: "/659e6c1875a6ef6d59572be3_types of landscapes.webp",
     spareImg: "",
   },
 ];

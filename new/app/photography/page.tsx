@@ -34,7 +34,7 @@ const images = [
   { src: "/IMG_9282-min.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_5403-min.jpg", aspect_ratio: 0.75 },
   { src: "/C75BD1A1-3934-418E-82B2-C337F3E9C130-min.JPG", aspect_ratio: 0.65 },
-  { src: "/IMG_8896.jpg", aspect_ratio: 1.33 },
+  { src: "/IMG_8896.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_20210719_172747_688-min.JPG", aspect_ratio: 1.0 },
   { src: "/sunset.jpeg", aspect_ratio: 1.76 },
   { src: "/IMG_0426-min.jpg", aspect_ratio: 0.75 },
