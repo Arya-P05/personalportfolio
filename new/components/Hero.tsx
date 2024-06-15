@@ -46,10 +46,11 @@ const Hero = () => {
             text="My Work"
             icon={<FaLocationArrow />}
             position="right"
+            otherClasses="mt-8"
           />
         </a>
       </div>
-      <div className="absolute left-0 bottom-0 m-10 fade-in">
+      <div className="fixed left-0 bottom-0 m-10 fade-in z-50">
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="ghost">
