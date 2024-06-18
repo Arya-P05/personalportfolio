@@ -153,6 +153,15 @@ export const BentoGridItem = ({
         <a href="personal-projects" className="block h-full w-full">
           <div>{content}</div>
         </a>
+      ) : id === 4 ? (
+        <a
+          href="/Arya Patel Resume 2024.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block h-full w-full"
+        >
+          <div>{content}</div>
+        </a>
       ) : id === 6 ? (
         <a href="memories" className="block h-full w-full">
           <div>{content}</div>
