@@ -46,23 +46,6 @@ export const BentoGridItem = ({
   const leftLists = ["ReactJS", "Express", "Typescript", "Django"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL", "Python"];
 
-  const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-  };
-
   const content = (
     <>
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
@@ -95,7 +78,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight md:max-w-50 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
 
@@ -111,7 +94,7 @@ export const BentoGridItem = ({
                 {leftLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs text-white-100 lg:text-base opacity-40 
                     lg:opacity-100 rounded-lg text-center bg-[#10132E]"
                   >
                     {item}
@@ -124,7 +107,7 @@ export const BentoGridItem = ({
                 {rightLists.map((item, i) => (
                   <span
                     key={i}
-                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs text-white-100 lg:text-base opacity-50 
                     lg:opacity-100 rounded-lg text-center bg-[#10132E]"
                   >
                     {item}
@@ -140,8 +123,7 @@ export const BentoGridItem = ({
                   text={"A lifetime of memories"}
                   icon={<IoCameraOutline size={18} />}
                   position="right"
-                  handleClick={handleCopy}
-                  otherClasses="!bg-[#161A31] no-border"
+                  otherClasses="!bg-[#161A31]"
                 />
               </div>
             </a>
@@ -165,7 +147,15 @@ export const BentoGridItem = ({
     >
       {id === 1 ? (
         <a href="work" className="block h-full w-full">
-          {content}
+          <div>{content}</div>
+        </a>
+      ) : id === 3 ? (
+        <a href="personal-projects" className="block h-full w-full">
+          <div>{content}</div>
+        </a>
+      ) : id === 6 ? (
+        <a href="memories" className="block h-full w-full">
+          <div>{content}</div>
         </a>
       ) : (
         content

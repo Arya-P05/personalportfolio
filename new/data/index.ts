@@ -21,8 +21,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "Personal Projects",
+    description: "A collection of my independent work",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -31,15 +31,14 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
+    title: "My Resume",
+    description: "Professional experience and accomplishments",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
     title: "Currently building a trading bot w/ sentiment analysis.",
