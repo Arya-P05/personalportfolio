@@ -43,7 +43,7 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
+  const leftLists = ["ReactJS", "Express", "Typescript", "Django"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL", "Python"];
 
   const [copied, setCopied] = useState(false);
@@ -63,18 +63,8 @@ export const BentoGridItem = ({
     setCopied(true);
   };
 
-  return (
-    <div
-      className={cn(
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
-        className
-      )}
-      style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-      }}
-    >
+  const content = (
+    <>
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
@@ -94,7 +84,6 @@ export const BentoGridItem = ({
             <img
               src={spareImg}
               alt={spareImg}
-              //   width={220}
               className="object-cover object-center w-full h-full"
             />
           )}
@@ -109,6 +98,7 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
             {description}
           </div>
+
           <div
             className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
           >
@@ -144,8 +134,8 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 6 && (
-            <div className="text-black">
-              <a href="photography">
+            <a href="memories">
+              <div className="text-black">
                 <MagicButton
                   text={"A lifetime of memories"}
                   icon={<IoCameraOutline size={18} />}
@@ -153,11 +143,33 @@ export const BentoGridItem = ({
                   handleClick={handleCopy}
                   otherClasses="!bg-[#161A31] no-border"
                 />
-              </a>
-            </div>
+              </div>
+            </a>
           )}
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <div
+      className={cn(
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        className
+      )}
+      style={{
+        background: "rgb(4,7,29)",
+        backgroundColor:
+          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+      }}
+    >
+      {id === 1 ? (
+        <a href="work" className="block h-full w-full">
+          {content}
+        </a>
+      ) : (
+        content
+      )}
     </div>
   );
 };

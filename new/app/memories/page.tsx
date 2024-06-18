@@ -88,7 +88,6 @@ const images = [
   { src: "/IMG_5461 copy-min.JPG", aspect_ratio: 0.75 },
   { src: "/20220901_233243248_iOS-min.JPG", aspect_ratio: 0.75 },
   { src: "/GEqWu-zqm4pkdwajvahl6v2aqrlyev-min.jpg", aspect_ratio: 1.33 },
-  { src: "/IMG_5942.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_3473.JPG", aspect_ratio: 0.75 },
   { src: "/IMG_1781 copy.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_9445-min.jpg", aspect_ratio: 1.75 },
