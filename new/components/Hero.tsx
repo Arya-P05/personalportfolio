@@ -27,7 +27,7 @@ const Hero = () => {
             Hello,
           </h2>
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-6xl fade-in"
+            className="fade-in text-center text-[40px] md:text-5xl lg:text-6xl"
             words="I'm Arya Patel"
           />
           <h2 className="fade-in uppercase tracking-widest text-xs text-center text-blue-100 max-w-200 mb-2 flex items-center justify-center">
@@ -40,7 +40,7 @@ const Hero = () => {
             <div className="mr-2 mb-0.5">
               <FaGraduationCap />
             </div>
-            Computer Science + Finance @ UWaterloo
+            Computer Science & Finance @ UWaterloo
           </h2>
           <a href="#work-section" className="fade-in">
             <MagicButton

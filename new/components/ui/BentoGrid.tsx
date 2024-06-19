@@ -1,8 +1,6 @@
 "use client";
-import { useState } from "react";
 import { IoCameraOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
-import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 
 export const BentoGrid = ({
@@ -117,16 +115,14 @@ export const BentoGridItem = ({
             </div>
           )}
           {id === 6 && (
-            <a href="memories">
-              <div className="text-black">
-                <MagicButton
-                  text={"A lifetime of memories"}
-                  icon={<IoCameraOutline size={18} />}
-                  position="right"
-                  otherClasses="!bg-[#161A31]"
-                />
-              </div>
-            </a>
+            <div className="text-black">
+              <MagicButton
+                text={"A lifetime of memories"}
+                icon={<IoCameraOutline size={18} />}
+                position="right"
+                otherClasses="!bg-[#161A31]"
+              />
+            </div>
           )}
         </div>
       </div>
@@ -147,11 +143,11 @@ export const BentoGridItem = ({
     >
       {id === 1 ? (
         <a href="work" className="block h-full w-full">
-          <div>{content}</div>
+          {content}
         </a>
       ) : id === 3 ? (
         <a href="personal-projects" className="block h-full w-full">
-          <div>{content}</div>
+          {content}
         </a>
       ) : id === 4 ? (
         <a
@@ -164,7 +160,7 @@ export const BentoGridItem = ({
         </a>
       ) : id === 6 ? (
         <a href="memories" className="block h-full w-full">
-          <div>{content}</div>
+          {content}
         </a>
       ) : (
         content
