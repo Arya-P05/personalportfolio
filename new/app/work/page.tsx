@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
+import { render } from "react-dom";
 import "./fade.css";
 import { Button } from "@/components/ui/button";
 import {

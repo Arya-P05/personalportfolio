@@ -2,6 +2,7 @@
 import { IoCameraOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
 import MagicButton from "./MagicButton";
+import "../fade.css";
 
 export const BentoGrid = ({
   className,
@@ -43,6 +44,10 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["ReactJS", "Express", "Typescript", "Django"];
   const rightLists = ["VueJS", "NuxtJS", "GraphQL", "Python"];
+
+  // Determine if the item should be hidden on small screens
+  const isHiddenOnSmall =
+    id !== 1 && id !== 3 && id !== 4 && id !== 6 ? "hidden-on-small" : "";
 
   const content = (
     <>
@@ -93,7 +98,7 @@ export const BentoGridItem = ({
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs text-white-100 lg:text-base opacity-40 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
                   >
                     {item}
                   </span>
@@ -106,7 +111,7 @@ export const BentoGridItem = ({
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs text-white-100 lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
                   >
                     {item}
                   </span>
@@ -133,6 +138,7 @@ export const BentoGridItem = ({
     <div
       className={cn(
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        isHiddenOnSmall, // Add the visibility control class here
         className
       )}
       style={{

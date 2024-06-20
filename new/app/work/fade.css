@@ -11,3 +11,25 @@
   opacity: 0; /* Initial state */
   animation: fadeIn 1s ease-in-out forwards;
 }
+
+h1 {
+  text-align: center;
+}
+
+.title-Timeline {
+  font-size: 23px;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .resume {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
