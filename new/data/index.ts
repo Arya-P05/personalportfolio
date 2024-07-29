@@ -12,7 +12,7 @@ export const gridItems = [
   {
     id: 2,
     title: "2 Years of Professional Experience",
-    description: "Been programming since 2019,",
+    description: "Programming since 2019,",
     className: "justify-center lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "opacity-20",
     titleClassName: "justify-center",
