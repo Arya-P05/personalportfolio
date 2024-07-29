@@ -183,7 +183,7 @@ export const DATA = {
         "Shadcn UI",
         "Magic UI",
         "Stripe",
-        "Cloudflare Workers",
+        "Cloudflare",
       ],
       links: [
         {
