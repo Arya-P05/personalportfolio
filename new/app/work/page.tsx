@@ -16,10 +16,40 @@ import {
 import { AtSign, Mail, Instagram, Linkedin, Github } from "lucide-react";
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 import { AuroraBackground } from "@/components/ui/Auora";
+import BlurFade from "@/components/blur-fade";
+import { ResumeCard } from "@/components/resume-card";
+import { DATA } from "@/data/resume";
+
+const BLUR_FADE_DELAY = 0.04;
 
 const Work = () => {
   return (
     <AuroraBackground className="fade-in">
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="flex flex-col gap-y-7 mx-auto xl:w-1/2 lg:w-2/3 md:w-3/4 sm:w-full">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-3xl font-bold">Work Experience</h2>
+          </BlurFade>
+          {DATA.work.map((work, id) => (
+            <BlurFade
+              key={work.company}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={work.company}
+                logoUrl={work.logoUrl}
+                altText={work.company}
+                title={work.company}
+                subtitle={work.title}
+                href={work.href}
+                badges={work.badges}
+                period={`${work.start} - ${work.end ?? "Present"}`}
+                description={work.description}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </div>
       <div className="absolute left-0 bottom-0 m-10 fade-in">
         <Dialog>
           <DialogTrigger asChild>
