@@ -15,10 +15,55 @@ import {
 import { AtSign, Mail, Instagram, Linkedin, Github } from "lucide-react";
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 import { AuroraBackground } from "@/components/ui/Auora";
+import BlurFade from "@/components/blur-fade";
+import { ProjectCard } from "@/components/project-card";
+import { DATA } from "@/data/resume";
+import { Badge } from "@/components/ui/badge";
+
+const BLUR_FADE_DELAY = 0.04;
 
 const Work = () => {
   return (
     <AuroraBackground className="fade-in">
+      <div className="flex min-h-screen items-center justify-center">
+        <div className="flex flex-col gap-y-7 mx-auto xl:w-1/2 lg:w-2/3 md:w-3/4 sm:w-full">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-2xl font-bold tracking-tighter sm:text-5xl">
+                  Check out my latest projects
+                </h2>
+                <p className="text-muted-foreground text-sm md:text-base lg:text-sm xl:text-base mx-4 md:mx-8 lg:mx-12 xl:mx-16">
+                  I&apos;ve worked on a variety of projects, from simple
+                  websites to complex web applications. <br></br> Here are a few
+                  of my favorites.
+                </p>
+              </div>
+            </div>
+          </BlurFade>
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.projects.map((project, id) => (
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+              >
+                <ProjectCard
+                  href={project.href}
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  dates={project.dates}
+                  tags={project.technologies}
+                  image={project.image}
+                  video={project.video}
+                  links={project.links}
+                />
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="absolute left-0 bottom-0 m-10 fade-in">
         <Dialog>
           <DialogTrigger asChild>

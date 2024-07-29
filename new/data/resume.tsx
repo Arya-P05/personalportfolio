@@ -5,6 +5,19 @@ export const DATA = {
   initials: "AP",
   url: "https://aryap.xyz/",
   location: "Toronto, Ontario, Canada",
+  skills: [
+    "React",
+    "Next.js",
+    "Typescript",
+    "Node.js",
+    "Python",
+    "Go",
+    "Postgres",
+    "Docker",
+    "Kubernetes",
+    "Java",
+    "C++",
+  ],
   work: [
     {
       company: "MPAC",

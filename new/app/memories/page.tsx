@@ -17,6 +17,8 @@ import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Gallery } from "next-gallery";
 
 const images = [
+  { src: "/third.jpg", aspect_ratio: 0.8 },
+  { src: "/first.jpg", aspect_ratio: 0.8 },
   { src: "/IMG_2603.JPG", aspect_ratio: 0.75 },
   { src: "/IMG_1669-min.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_2207.jpg", aspect_ratio: 0.75 },
@@ -27,6 +29,7 @@ const images = [
   { src: "/20220831_214453468_iOS-min.JPG", aspect_ratio: 0.75 },
   { src: "/20220701_211929-min.JPG", aspect_ratio: 0.65 },
   { src: "/eh-min.jpg", aspect_ratio: 0.66 },
+  { src: "/fifth.jpg", aspect_ratio: 0.8 },
   { src: "/IMG_9619.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_0749.jpg", aspect_ratio: 0.65 },
   { src: "/IMG_5886-min.jpg", aspect_ratio: 0.75 },
@@ -41,6 +44,7 @@ const images = [
   { src: "/IMG_7111 copy-min.JPG", aspect_ratio: 1.33 },
   { src: "/IMG_4206.jpg", aspect_ratio: 0.75 },
   { src: "/IMG_0712.jpg", aspect_ratio: 0.75 },
+  { src: "/fourth.jpg", aspect_ratio: 0.8 },
   { src: "/Old Antique Effect ACR prt 2 copy 2.jpg", aspect_ratio: 1.33 },
   { src: "/20220901_234411744_iOS-min.JPG", aspect_ratio: 0.75 },
   { src: "/E6A87F75-FFA0-41E8-9E11-55D463E46453-min.jpg", aspect_ratio: 0.65 },
@@ -95,6 +99,14 @@ const images = [
     src: "/71091878687__FC44E6C2-FDA6-4EF4-A81E-3F76DB81D74A-min.jpg",
     aspect_ratio: 0.75,
   },
+  { src: "/seventh.jpg", aspect_ratio: 0.8 },
+  { src: "/ninth.jpg", aspect_ratio: 0.8 },
+  { src: "/IMG_4067.jpg", aspect_ratio: 0.56 },
+  { src: "/IMG_3756.JPG", aspect_ratio: 1.33 },
+  { src: "/IMG_4769.jpg", aspect_ratio: 0.75 },
+  { src: "/sixth.jpg", aspect_ratio: 0.8 },
+  { src: "/second.jpg", aspect_ratio: 0.8 },
+  { src: "/eighth.jpg", aspect_ratio: 0.8 },
 ];
 
 const photography = () => {
