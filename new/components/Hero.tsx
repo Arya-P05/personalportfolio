@@ -30,8 +30,8 @@ const Hero = () => {
           <h2 className="fade-in uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Hello,
           </h2>
-          <h1 className="fade-in text-center text-[40px] md:text-5xl lg:text-6xl my-4 mb-6 font-bold leading-snug tracking-wide">
-            I'm Arya Patel
+          <h1 className="fade-in text-center text-[40px] md:text-5xl lg:text-6xl my-4 mb-6 leading-snug tracking-wide">
+            I'm <b>Arya Patel</b>
           </h1>
           <h2 className="fade-in uppercase tracking-widest text-xs text-center text-blue-100 max-w-200 mb-2 flex items-center justify-center">
             <div className="mr-2 mb-0.5">

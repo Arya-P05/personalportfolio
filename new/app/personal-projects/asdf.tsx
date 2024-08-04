@@ -1,6 +1,5 @@
 "use client";
-import React, { Fragment } from "react";
-import { render } from "react-dom";
+import React from "react";
 import "./fade.css";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,29 +15,23 @@ import {
 import { AtSign, Mail, Instagram, Linkedin, Github } from "lucide-react";
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 import { AuroraBackground } from "@/components/ui/Auora";
-import BlurFade from "@/components/blur-fade";
-import { ResumeCard } from "@/components/resume-card";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import Image from "next/image";
 import { DATA } from "@/data/resume";
 
-const BLUR_FADE_DELAY = 0.04;
-
 const Work = () => {
+  const cards = DATA.data.map((card, index) => (
+    <Card key={card.src} card={card} index={index} />
+  ));
+
   return (
     <AuroraBackground className="fade-in">
-      <div className="flex min-h-screen items-center justify-center">
-        <p className="z-50">
-          ...still working on this page lol, but you can still check out my
-          projects on{" "}
-          <a
-            href="https://github.com/Arya-P05"
-            className="text-purple italic"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            my github
-          </a>
-        </p>
+      <div className="flex items-center justify-center w-full min-h-screen overflow-hidden">
+        <div className="flex flex-col items-center justify-center w-full">
+          <Carousel items={cards} />
+        </div>
       </div>
+
       <div className="absolute left-0 bottom-0 m-10 fade-in">
         <Dialog>
           <DialogTrigger asChild>

@@ -65,7 +65,7 @@ export const DATA = {
       start: "July 2023",
       end: "Aug 2023",
       description:
-        "Developed an adaptive internal equity screener tool using Python and TensorFlow, leveraging LSTM networks to enhance its accuracy. I also built several React and TypeScript components that can contribute to Perspective, the company's open-source software. Expereinced creating comprehensive test suites with Jest and Mocha & Chai, which led to a 35% reduction in intermittent security issues, significantly improving the stability and security of the software.",
+        "Developed an adaptive internal equity screener tool using Python and TensorFlow, leveraging LSTM networks to enhance its accuracy. I also built several pipelines using Apache Spark and AWS to streamline financial data analysis workflows. Expereinced creating comprehensive test suites with Jest to ensure a test-driven development practice as well as significantly improving the stability and security of the software.",
     },
   ],
   education: [
