@@ -4,6 +4,8 @@ const nextConfig = {
     domains: [
       "api.microlink.io", // Microlink Image Preview
       "picsum.photos",
+      "images.unsplash.com",
+      "assets.aceternity.com",
     ],
   },
 };

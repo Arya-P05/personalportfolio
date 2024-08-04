@@ -21,11 +21,11 @@ export const DATA = {
   work: [
     {
       company: "MPAC",
-      href: "",
+      href: "https://www.mpac.ca/en",
       badges: [],
       location: "Toronto, Ontario, Canada",
       title: "Software Engineer Intern",
-      logoUrl: "/atomic.png",
+      logoUrl: "/mpac.png",
       start: "May 2024",
       end: "Aug 2024",
       description:
@@ -37,7 +37,7 @@ export const DATA = {
       href: "",
       location: "Waterloo, Ontario, Canada",
       title: "Software Engineer Intern",
-      logoUrl: "/shopify.svg",
+      logoUrl: "/htn.png",
       start: "January 2024",
       end: "Present",
       description:
@@ -49,7 +49,7 @@ export const DATA = {
       badges: [],
       location: "Toronto, Ontario, Canada",
       title: "Software Engineer Intern",
-      logoUrl: "/nvidia.png",
+      logoUrl: "/guardian.png",
       start: "Sept 2023",
       end: "Feb 2024",
       description:
@@ -61,7 +61,7 @@ export const DATA = {
       badges: [],
       location: "Remote",
       title: "Software Engineering Intern Experience",
-      logoUrl: "/splunk.svg",
+      logoUrl: "/JPMorgan Chase & Co.png",
       start: "July 2023",
       end: "Aug 2023",
       description:
@@ -208,6 +208,46 @@ export const DATA = {
       image: "",
       video:
         "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+    },
+  ],
+
+  data: [
+    {
+      category: "ECHO",
+      title: "Keep your memories alive.",
+      src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "test",
+    },
+    {
+      category: "Robo-Advisor",
+      title: "Invest safe, the smart way.",
+      src: "https://images.unsplash.com/photo-1531554694128-c4c6665f59c2?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "test",
+    },
+    {
+      category: "Promptopia",
+      title: "Prompt engineering made scalable.",
+      src: "https://images.unsplash.com/photo-1713869791518-a770879e60dc?q=80&w=2333&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "test",
+    },
+
+    {
+      category: "Movieland",
+      title: "Netflix home page reengineered.",
+      src: "https://images.unsplash.com/photo-1599202860130-f600f4948364?q=80&w=2515&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "test",
+    },
+    {
+      category: "iOS",
+      title: "Photography just got better.",
+      src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "test",
+    },
+    {
+      category: "Hiring",
+      title: "Hiring for a Staff Software Engineer",
+      src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      content: "test",
     },
   ],
 } as const;

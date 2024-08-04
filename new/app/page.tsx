@@ -11,7 +11,7 @@ export default function Home() {
       </AuroraBackground>
       <div
         id="work-section"
-        className="mx:10 xl:mx-50 lg:mx-40 md:mx-20 sm:mx-10"
+        className="mx:10 xl:mx-50 lg:mx-40 md:mx-20 sm:mx-10 "
       >
         <Grid />
       </div>

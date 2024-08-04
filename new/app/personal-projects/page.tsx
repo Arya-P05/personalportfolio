@@ -15,52 +15,20 @@ import {
 import { AtSign, Mail, Instagram, Linkedin, Github } from "lucide-react";
 import { HoverCard, HoverCardTrigger } from "@/components/ui/hover-card";
 import { AuroraBackground } from "@/components/ui/Auora";
-import BlurFade from "@/components/blur-fade";
-import { ProjectCard } from "@/components/project-card";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import Image from "next/image";
 import { DATA } from "@/data/resume";
-import { Badge } from "@/components/ui/badge";
-
-const BLUR_FADE_DELAY = 0.04;
 
 const Work = () => {
+  const cards = DATA.data.map((card, index) => (
+    <Card key={card.src} card={card} index={index} />
+  ));
+
   return (
     <AuroraBackground className="fade-in">
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="flex flex-col gap-y-7 mx-auto xl:w-1/2 lg:w-2/3 md:w-3/4 sm:w-full">
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-2xl font-bold tracking-tighter sm:text-5xl">
-                  Check out my latest projects
-                </h2>
-                <p className="text-muted-foreground text-sm md:text-base lg:text-sm xl:text-base mx-4 md:mx-8 lg:mx-12 xl:mx-16">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. <br></br> Here are a few
-                  of my favorites.
-                </p>
-              </div>
-            </div>
-          </BlurFade>
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  video={project.video}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
-          </div>
+      <div className="flex items-center justify-center w-full min-h-screen overflow-hidden">
+        <div className="flex flex-col items-center justify-center w-full">
+          <Carousel items={cards} />
         </div>
       </div>
 
@@ -188,3 +156,35 @@ const Work = () => {
 };
 
 export default Work;
+
+const DummyContent = () => {
+  return (
+    <>
+      {[...new Array(3).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                The first rule of Apple club is that you boast about Apple club.
+              </span>{" "}
+              Keep a journal, quickly jot down a grocery list, and take amazing
+              class notes. Want to convert those notes to text? No problem.
+              Langotiya jeetu ka mara hua yaar is ready to capture every
+              thought.
+            </p>
+            <Image
+              src="https://assets.aceternity.com/macbook.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+            />
+          </div>
+        );
+      })}
+    </>
+  );
+};

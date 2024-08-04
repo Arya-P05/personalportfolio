@@ -32,6 +32,7 @@
     "react-markdown": "^9.0.1",
     "react-timeline-scribble": "^1.0.14",
     "tailwind-merge": "^2.3.0",
+    "tailwind-scrollbar-hide": "^1.1.7",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.165.0",
     "three-globe": "^2.31.0"
