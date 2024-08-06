@@ -70,14 +70,6 @@ export const DATA = {
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
-    },
-    {
       school: "University of Waterloo",
       href: "https://uwaterloo.ca",
       degree: "Bachelor's Degree of Computer Science and Finance, Double Major",
