@@ -6,6 +6,10 @@ const nextConfig = {
       "picsum.photos",
       "images.unsplash.com",
       "assets.aceternity.com",
+      "photos.app.goo.gl",
+      "res.cloudinary.com",
+      "i.ibb.co",
+      "lh3.googleusercontent.com",
     ],
   },
 };
