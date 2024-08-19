@@ -29,7 +29,7 @@ export const DATA = {
       start: "May 2024",
       end: "Aug 2024",
       description:
-        "Pptimized MPAC’s Geo-spatial Convolutional Neural Network, boosting classification accuracy by 16%. I also played a key role in developing internal Retrieval-Augmented Generation (RAG) Language Models, successfully integrating over four models and reducing response times by 0.5 seconds. Additionally, I implemented various AWS SQS queues and custom endpoints to automate malicious content checks in LLM responses. Which both streamlined the process and ensured security without response compromising speeds.",
+        "Optimized MPAC’s Geo-spatial Convolutional Neural Network, boosting classification accuracy by 16%. I also played a key role in developing internal Retrieval-Augmented Generation (RAG) Language Models, successfully integrating over four models and reducing response times by 0.5 seconds. Additionally, I implemented various AWS SQS queues and custom endpoints to automate malicious content checks in LLM responses. Which both streamlined the process and ensured security without response compromising speeds.",
     },
     {
       company: "Hack The North",
