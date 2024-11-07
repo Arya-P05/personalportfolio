@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="mr-2 mb-0.5">
               <FaCode />
             </div>
-            Software Engineer @ MPAC
+            ML + Backend @ MPAC
           </h2>
           <h2 className="fade-in uppercase tracking-widest text-xs text-center text-blue-100 max-w-200 mb-2 flex items-center justify-center">
             <div className="mr-2 mb-0.5">
