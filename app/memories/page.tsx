@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { Caveat } from "next/font/google";
+import Contact from "@/components/Contact";
 const caveat = Caveat({ subsets: ["latin"] });
 
 const fetchImages = async () => {
@@ -56,17 +57,20 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className={`${caveat.className} max-w-[90%] mx-auto py-16 sm:py-24`}>
-      <h2 className="text-6xl font-bold mb-4">Memories</h2>
-      <p className="text-3xl mb-8">
-        "We take photos as a return ticket to a moment otherwise gone."
-        <br></br>These are mine, enjoy.
-      </p>
-      <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-5">
-        {images.map((image) => (
-          <BlurImage key={image.id} image={image} />
-        ))}
+    <div>
+      <div className={`${caveat.className} max-w-[90%] mx-auto py-16 sm:py-24`}>
+        <h2 className="text-6xl font-bold mb-4">Memories</h2>
+        <p className="text-3xl mb-8">
+          "We take photos as a return ticket to a moment otherwise gone."
+          <br></br>These are mine, enjoy.
+        </p>
+        <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-5">
+          {images.map((image) => (
+            <BlurImage key={image.id} image={image} />
+          ))}
+        </div>
       </div>
+      <Contact />
     </div>
   );
 }
