@@ -1,1 +1,11 @@
-node_modules
+# Ignore node_modules folder
+node_modules/
+
+# Ignore .env.local file
+.env.local
+
+# Ignore build output and helper files
+build/
+dist/
+makecsv.py
+images.csv 
