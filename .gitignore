@@ -8,4 +8,4 @@ node_modules/
 build/
 dist/
 makecsv.py
-images.csv
+images.csv 
