@@ -62,15 +62,6 @@ export default function Gallery() {
         "We take photos as a return ticket to a moment otherwise gone."
         <br></br>These are mine, enjoy.
       </p>
-
-      {/* <br />
-        Trips that <span className="text-[#2E7D32]">expanded my world</span>,
-        events that brought me{" "}
-        <span className="text-[#D32F2F]">
-          closer to the people I care about
-        </span>
-        , and experiences that helped{" "}
-        <span className="text-[#42A5F5]">shape who I am</span>. */}
       <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-5">
         {images.map((image) => (
           <BlurImage key={image.id} image={image} />
