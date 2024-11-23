@@ -1,37 +1,22 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { createClient } from "@supabase/supabase-js";
 import { Caveat } from "next/font/google";
 import Contact from "@/components/Contact";
 const caveat = Caveat({ subsets: ["latin"] });
 
 const fetchImages = async () => {
-  console.log(
-    "supabaseURL",
-    JSON.stringify(process.env.NEXT_PUBLIC_SUPABASE_URL)
-  );
-  console.log(
-    "supabaseKey",
-    JSON.stringify(process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
-  );
-
-  const supabaseAdmin = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL || "",
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
-  );
-
-  const { data, error } = await supabaseAdmin
-    .from("images")
-    .select("*")
-    .order("id");
-
-  if (error) {
-    console.error("Error fetching data:", error.message);
+  try {
+    const response = await fetch("/api/images");
+    if (!response.ok) {
+      throw new Error(`Error fetching images: ${response.statusText}`);
+    }
+    const { data } = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
     return [];
   }
-
-  return data;
 };
 
 function cn(...classes: string[]) {
