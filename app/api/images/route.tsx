@@ -1,0 +1,27 @@
+import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
+
+export async function GET() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL; // Public Supabase URL
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY; // Service Role Key (server-side only)
+
+  if (!supabaseUrl || !serviceRoleKey) {
+    return NextResponse.json(
+      { error: "Missing Supabase credentials" },
+      { status: 500 }
+    );
+  }
+
+  const supabaseAdmin = createClient(supabaseUrl, serviceRoleKey);
+
+  const { data, error } = await supabaseAdmin
+    .from("images")
+    .select("*")
+    .order("id");
+
+  if (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+
+  return NextResponse.json({ data }, { status: 200 });
+}
