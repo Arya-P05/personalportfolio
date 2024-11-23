@@ -7,7 +7,6 @@ const nextConfig = {
       "images.unsplash.com",
       "assets.aceternity.com",
       "photos.app.goo.gl",
-      "res.cloudinary.com",
       "i.ibb.co",
       "lh3.googleusercontent.com",
       "bit.ly",
