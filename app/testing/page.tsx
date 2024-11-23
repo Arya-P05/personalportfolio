@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
+import { Caveat } from "next/font/google";
+const caveat = Caveat({ subsets: ["latin"] });
 
 const fetchImages = async () => {
   console.log(
@@ -54,7 +56,21 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="max-w-[90%] mx-auto py-16 sm:py-24">
+    <div className={`${caveat.className} max-w-[90%] mx-auto py-16 sm:py-24`}>
+      <h2 className="text-6xl font-bold mb-4">Memories</h2>
+      <p className="text-3xl mb-8">
+        "We take photos as a return ticket to a moment otherwise gone."
+        <br></br>These are mine, enjoy.
+      </p>
+
+      {/* <br />
+        Trips that <span className="text-[#2E7D32]">expanded my world</span>,
+        events that brought me{" "}
+        <span className="text-[#D32F2F]">
+          closer to the people I care about
+        </span>
+        , and experiences that helped{" "}
+        <span className="text-[#42A5F5]">shape who I am</span>. */}
       <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-5">
         {images.map((image) => (
           <BlurImage key={image.id} image={image} />
@@ -74,7 +90,6 @@ function BlurImage({ image }: { image: Image }) {
           alt="image"
           src={image.imageSrc}
           className={cn(
-            "group-hover: opacity-75 duration-700 ease-in-out",
             isLoading
               ? "grayscale blur-2xl scale-110"
               : "grayscale-0 blur-0 scale-100"

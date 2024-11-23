@@ -3,6 +3,7 @@
     "/testing/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/testing/page.css",
       "static/chunks/app/testing/page.js"
     ],
     "/layout": [
@@ -10,6 +11,12 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/work/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/work/page.css",
+      "static/chunks/app/work/page.js"
     ]
   }
 }

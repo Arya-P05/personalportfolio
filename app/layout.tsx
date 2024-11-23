@@ -5,6 +5,7 @@ import { ThemeProvider } from "./provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+// Your existing code
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
