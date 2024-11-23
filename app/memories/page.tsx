@@ -85,6 +85,7 @@ function BlurImage({ image }: { image: Image }) {
           alt="image"
           src={image.imageSrc}
           className={cn(
+            "duration-700 ease-in-out",
             isLoading
               ? "grayscale blur-2xl scale-110"
               : "grayscale-0 blur-0 scale-100"
