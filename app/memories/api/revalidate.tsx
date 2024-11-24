@@ -7,7 +7,6 @@ export default async function handler(
   if (req.query.secret !== process.env.REVALIDATE_SECRET) {
     return res.status(401).json({ message: "gtfo" });
   }
-
   try {
     await res.revalidate("/");
     return res.json({ revalidate: true });
