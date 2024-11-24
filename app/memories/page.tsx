@@ -5,20 +5,6 @@ import { Caveat } from "next/font/google";
 import Contact from "@/components/Contact";
 const caveat = Caveat({ subsets: ["latin"] });
 
-const fetchImages = async () => {
-  try {
-    const response = await fetch("/api/images");
-    if (!response.ok) {
-      throw new Error(`Error fetching images: ${response.statusText}`);
-    }
-    const { data } = await response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
-};
-
 function cn(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -27,6 +13,19 @@ type Image = {
   id: number;
   imageSrc: string;
 };
+
+async function fetchImages() {
+  const response = await fetch("/api/images");
+
+  if (!response.ok) {
+    throw new Error(`Error fetching images: ${response.statusText}`);
+  }
+
+  const { data } = await response.json();
+  return data;
+}
+
+export const revalidate = 60;
 
 export default function Gallery() {
   const [images, setImages] = useState<Image[]>([]);

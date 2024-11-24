@@ -12,6 +12,10 @@ const nextConfig = {
       "bit.ly",
     ],
   },
+  reactStrictMode: true, // Ensures your app adheres to React best practices
+  experimental: {
+    appDir: true, // Enable the app directory for the new routing system if you're using it
+  },
 };
 
 export default nextConfig;
