@@ -14,32 +14,29 @@ type Image = {
   imageSrc: string;
 };
 
-async function fetchImages() {
-  const response = await fetch("/api/images");
+// Fetch data during build and revalidation
+export async function getStaticProps() {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/images`
+  );
 
   if (!response.ok) {
     throw new Error(`Error fetching images: ${response.statusText}`);
   }
 
   const { data } = await response.json();
-  return data;
+
+  return {
+    props: {
+      images: data,
+    },
+    revalidate: 60, // Revalidate every 60 seconds
+  };
 }
 
 export const revalidate = 60;
 
-export default function Gallery() {
-  const [images, setImages] = useState<Image[]>([]);
-
-  // Fetch images on component mount
-  useEffect(() => {
-    const loadImages = async () => {
-      const fetchedImages = await fetchImages();
-      setImages(fetchedImages);
-    };
-
-    loadImages();
-  }, []);
-
+export default function Gallery({ images }: { images: Image[] }) {
   return (
     <div>
       <div className={`${caveat.className} max-w-[90%] mx-auto py-16 sm:py-24`}>
