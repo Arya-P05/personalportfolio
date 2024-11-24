@@ -5,6 +5,20 @@ import { Caveat } from "next/font/google";
 import Contact from "@/components/Contact";
 const caveat = Caveat({ subsets: ["latin"] });
 
+const fetchImages = async () => {
+  try {
+    const response = await fetch("/api/images");
+    if (!response.ok) {
+      throw new Error(`Error fetching images: ${response.statusText}`);
+    }
+    const { data } = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+};
+
 function cn(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
@@ -14,36 +28,27 @@ type Image = {
   imageSrc: string;
 };
 
-// Fetch data during build and revalidation
-export async function getStaticProps() {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/images`
-  );
+export default function Gallery() {
+  const [images, setImages] = useState<Image[]>([]);
 
-  if (!response.ok) {
-    throw new Error(`Error fetching images: ${response.statusText}`);
-  }
+  // Fetch images on component mount
+  useEffect(() => {
+    const loadImages = async () => {
+      const fetchedImages = await fetchImages();
+      setImages(fetchedImages);
+    };
 
-  const { data } = await response.json();
+    loadImages();
+  }, []);
 
-  return {
-    props: {
-      images: data,
-    },
-    revalidate: 60, // Revalidate every 60 seconds
-  };
-}
-
-export const revalidate = 60;
-
-export default function Gallery({ images }: { images: Image[] }) {
   return (
     <div>
       <div className={`${caveat.className} max-w-[90%] mx-auto py-16 sm:py-24`}>
         <h2 className="text-6xl font-bold mb-4">Memories</h2>
         <p className="text-3xl mb-8">
           "We take photos as a return ticket to a moment otherwise gone."
-          <br></br>These are mine, enjoy.
+          <br></br>
+          These are mine, enjoy.
         </p>
         <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-5">
           {images.map((image) => (
