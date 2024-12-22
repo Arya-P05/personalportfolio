@@ -2,11 +2,8 @@
   "rewrites": [
     {
       "source": "/the-paths-we-forge/:path*",
-      "destination": "https://the-paths-we-forge.vercel.app/:path*"
+      "destination": "https://the-paths-we-forge.vercel.app/"
     },
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
