@@ -3,15 +3,6 @@ import "./globals.css";
 export default function Home() {
   return (
     <>
-      <div className="nav">
-        <h2>GRAINEE</h2>
-        <div className="menu">
-          <p>About us</p>
-          <p>Our Mission</p>
-          <p>Contact us</p>
-        </div>
-      </div>
-
       <div className="hero">
         <div className="hero-text">
           <h1>Grainy Forever.</h1>
