@@ -1,5 +1,9 @@
 import "./globals.css";
 
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <h1>hi</h1>
+    </>
+  );
 }
