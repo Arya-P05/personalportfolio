@@ -5,16 +5,8 @@ import { AuroraBackground } from "@/components/ui/Auora";
 
 export default function Home() {
   return (
-    <main className="bg-black-100 scroll-smooth">
-      <AuroraBackground>
-        <Hero />
-      </AuroraBackground>
-      <div
-        id="work-section"
-        className="mx:10 xl:mx-50 lg:mx-40 md:mx-20 sm:mx-10 "
-      >
-        <Grid />
-      </div>
+    <main className="bg-black">
+      <Hero />
     </main>
   );
 }
