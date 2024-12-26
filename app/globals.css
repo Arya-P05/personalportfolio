@@ -2,7 +2,6 @@ body {
   background-color: rgb(235, 235, 235);
   color: black;
   font-family: "Roxborough CF";
-  font-style: italic;
 }
 
 @media (max-width: 600px) {
