@@ -1,4 +1,18 @@
 body {
-  background-color: black;
-  font-family: "Plantagenet Cherokee", sans-serif, Arial;
+  background-color: rgb(235, 235, 235);
+  color: black;
+  font-family: "Roxborough CF";
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .logo-container {
+    top: 5px;
+    left: 5px;
+  }
+
+  .logo-container img {
+    width: 40px; /* Smaller logo size */
+    height: 40px;
+  }
 }
