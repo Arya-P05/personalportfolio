@@ -15,7 +15,7 @@ export default function Home() {
           priority
         />
       </div>
-      <h1>Arya Patel &</h1>
+      <h1>Arya Patel</h1>
     </>
   );
 }
