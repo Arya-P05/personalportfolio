@@ -1,17 +1,232 @@
-body {
-  background-color: rgb(235, 235, 235);
-  color: black;
-  font-family: "Roxborough CF";
+/* RoxboroughCF Thin */
+@font-face {
+  font-family: "RoxboroughCF";
+  src: url("/fonts/RoxboroughCF-Thin.eot");
+  src: url("/fonts/RoxboroughCF-Thin.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-Thin.woff") format("woff"),
+    url("/fonts/RoxboroughCF-Thin.eot?#iefix") format("embedded-opentype");
+  font-weight: 100;
+  font-style: normal;
 }
 
-@media (max-width: 600px) {
-  .logo-container {
-    top: 5px;
-    left: 5px;
-  }
+/* RoxboroughCF Thin Italic */
+@font-face {
+  font-family: "RoxboroughCF-italic";
+  src: url("/fonts/RoxboroughCF-ThinItalic.eot");
+  src: url("/fonts/RoxboroughCF-ThinItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-ThinItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-ThinItalic.eot?#iefix") format("embedded-opentype");
+  font-weight: 100;
+  font-style: italic;
+}
 
-  .logo-container img {
-    width: 40px; /* Smaller logo size */
-    height: 40px;
+/* RoxboroughCF Regular */
+@font-face {
+  font-family: "RoxboroughCF-regular";
+  src: url("/fonts/RoxboroughCF-Regular.eot");
+  src: url("/fonts/RoxboroughCF-Regular.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-Regular.woff") format("woff"),
+    url("/fonts/RoxboroughCF-Regular.eot?#iefix") format("embedded-opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* RoxboroughCF Regular Italic */
+@font-face {
+  font-family: "RoxboroughCF-regularItalic";
+  src: url("/fonts/RoxboroughCF-RegularItalic.eot");
+  src: url("/fonts/RoxboroughCF-RegularItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-RegularItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-RegularItalic.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* RoxboroughCF Medium */
+@font-face {
+  font-family: "RoxboroughCF-medium";
+  src: url("/fonts/RoxboroughCF-Medium.eot");
+  src: url("/fonts/RoxboroughCF-Medium.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-Medium.woff") format("woff"),
+    url("/fonts/RoxboroughCF-Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* RoxboroughCF Medium Italic */
+@font-face {
+  font-family: "RoxboroughCF-mediumItalic";
+  src: url("/fonts/RoxboroughCF-MediumItalic.eot");
+  src: url("/fonts/RoxboroughCF-MediumItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-MediumItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-MediumItalic.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* RoxboroughCF Light */
+@font-face {
+  font-family: "RoxboroughCF-light";
+  src: url("/fonts/RoxboroughCF-Light.eot");
+  src: url("/fonts/RoxboroughCF-Light.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-Light.woff") format("woff"),
+    url("/fonts/RoxboroughCF-Light.eot?#iefix") format("embedded-opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* RoxboroughCF Light Italic */
+@font-face {
+  font-family: "RoxboroughCF-lightItalic";
+  src: url("/fonts/RoxboroughCF-LightItalic.eot");
+  src: url("/fonts/RoxboroughCF-LightItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-LightItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-LightItalic.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* RoxboroughCF Bold */
+@font-face {
+  font-family: "RoxboroughCF-bold";
+  src: url("/fonts/RoxboroughCF-Bold.eot");
+  src: url("/fonts/RoxboroughCF-Bold.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* RoxboroughCF Bold Italic */
+@font-face {
+  font-family: "RoxboroughCF-boldItalic";
+  src: url("/fonts/RoxboroughCF-BoldItalic.eot");
+  src: url("/fonts/RoxboroughCF-BoldItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* RoxboroughCF Demi Bold */
+@font-face {
+  font-family: "RoxboroughCF-demiBold";
+  src: url("/fonts/RoxboroughCF-DemiBold.eot");
+  src: url("/fonts/RoxboroughCF-DemiBold.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-DemiBold.woff") format("woff"),
+    url("/fonts/RoxboroughCF-DemiBold.eot?#iefix") format("embedded-opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* RoxboroughCF Demi Bold Italic */
+@font-face {
+  font-family: "RoxboroughCF-demiBoldItalic";
+  src: url("/fonts/RoxboroughCF-DemiBoldItalic.eot");
+  src: url("/fonts/RoxboroughCF-DemiBoldItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-DemiBoldItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-DemiBoldItalic.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* RoxboroughCF Extra Bold */
+@font-face {
+  font-family: "RoxboroughCF-extraBold";
+  src: url("/fonts/RoxboroughCF-ExtraBold.eot");
+  src: url("/fonts/RoxboroughCF-ExtraBold.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-ExtraBold.woff") format("woff"),
+    url("/fonts/RoxboroughCF-ExtraBold.eot?#iefix") format("embedded-opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* RoxboroughCF Extra Bold Italic */
+@font-face {
+  font-family: "RoxboroughCF-extraBoldItalic";
+  src: url("/fonts/RoxboroughCF-ExtraBoldItalic.eot");
+  src: url("/fonts/RoxboroughCF-ExtraBoldItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-ExtraBoldItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-ExtraBoldItalic.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/* RoxboroughCF Heavy */
+@font-face {
+  font-family: "RoxboroughCF-heavy";
+  src: url("/fonts/RoxboroughCF-Heavy.eot");
+  src: url("/fonts/RoxboroughCF-Heavy.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-Heavy.woff") format("woff"),
+    url("/fonts/RoxboroughCF-Heavy.eot?#iefix") format("embedded-opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* RoxboroughCF Heavy Italic */
+@font-face {
+  font-family: "RoxboroughCF-heavyItalic";
+  src: url("/fonts/RoxboroughCF-HeavyItalic.eot");
+  src: url("/fonts/RoxboroughCF-HeavyItalic.woff2") format("woff2"),
+    url("/fonts/RoxboroughCF-HeavyItalic.woff") format("woff"),
+    url("/fonts/RoxboroughCF-HeavyItalic.eot?#iefix")
+      format("embedded-opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: "RoxboroughCF-regular", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 24px;
+  }
+}
+
+.logo {
+  padding-left: 1%;
+  padding-top: 1%;
+  text-align: left;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+h2 {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.logo img {
+  max-width: 90%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    max-width: 80%;
   }
 }
