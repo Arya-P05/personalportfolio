@@ -1,0 +1,26 @@
+/* components/LogoAnimation.module.css */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+  transition: all 2s ease;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: black;
+  transition: all 2s ease;
+  padding-top: 20px; /* Adjust as needed */
+}
+
+.logo {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  opacity: 1;
+  transition: opacity 2s ease;
+}

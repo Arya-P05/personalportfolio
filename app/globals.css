@@ -177,19 +177,15 @@
   font-weight: 900;
   font-style: italic;
 }
-
 body {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-  font-family: "RoxboroughCF-regular", sans-serif;
-  font-size: 48px;
-  font-style: normal;
+  height: 100vh; /* Use 100vh to ensure it takes the full viewport height */
   margin: 0;
-  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  flex-direction: column; /* Ensures that elements in the body stack vertically */
 }
 
 @media (max-width: 768px) {
@@ -207,17 +203,7 @@ body {
 .logo {
   padding-left: 1%;
   padding-top: 1%;
-  text-align: left;
-}
-
-h1 {
-  margin: 0.5rem 0;
-  text-align: left;
-}
-
-h2 {
-  font-family: sans-serif;
-  font-weight: 400;
+  text-align: center;
 }
 
 .logo img {
@@ -229,4 +215,91 @@ h2 {
   .logo img {
     max-width: 80%;
   }
+}
+
+/* Container to center the letter content */
+.letter-container {
+  max-width: 550px;
+  padding: 20px;
+  text-align: left; /* Ensures text is aligned left inside the container */
+  word-spacing: 0.05rem;
+  color: rgb(233, 233, 233);
+}
+
+/* Specific styles for the letter text */
+.letter-container h1 {
+  font-family: "Georgia", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin-bottom: 1rem; /* Adjust margin as needed */
+}
+
+.letter-container p {
+  font-family: "Georgia", sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem; /* Spacing between paragraphs */
+}
+
+.styled-text {
+  font-family: "Georgia", sans-serif;
+  font-style: normal;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: #fbca60b5;
+}
+
+.ne-resize-link {
+  cursor: ne-resize;
+  text-decoration: none;
+  color: inherit;
+}
+
+.styled-text:hover {
+  cursor: ne-resize; /* Northeast resize cursor on hover */
+}
+
+/* Social Icons Container */
+.social-icons-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 1rem; /* Adjust margin as needed */
+  gap: 1rem;
+  flex-wrap: wrap;
+  transform: translateY(3px);
+}
+
+/* Individual Social Icon Styling */
+.social-icon {
+  color: white; /* White color for all icons */
+  font-size: 1.2rem; /* Matches the font size of the text */
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #cccccc; /* Slightly darker white for hover effect */
+  cursor: ne-resize;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-icons-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.inline-container {
+  display: inline;
+  align-items: center;
+  gap: 0.5rem; /* Space between text and icons */
+}
+
+.inline-icons {
+  display: inline-flex;
+  gap: 0.5rem; /* Space between individual icons */
 }
